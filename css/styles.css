@@ -981,6 +981,33 @@ img {
         padding-left: 70vw;
     }
 }
+@media (max-width:1110px){
+    .site-wrapper{
+        margin-left: 0vw;
+        padding: 0 23vw;
+    }
+    .page-body__background{
+        padding-left: 70vw;
+    }
+}
+@media (max-width:1050px){
+    .site-wrapper{
+        margin-left: 0vw;
+        padding: 0 20vw;
+    }
+    .page-body__background{
+        padding-left: 80vw;
+    }
+}
+
+.catalog-page-body{
+    padding-right: 27px;
+}
+
+.main-header-catalog{
+    padding-right: 27px;
+}
+
 
 /*News*/
 .news {
@@ -1743,7 +1770,7 @@ img {
 /* Catalog indents fixes */
 .pagination,
 .horizontal-line {
-    margin-right: 27px;
+    margin-right: 54px;
 }
 .catalog-product-list {
     column-gap: 43px;
