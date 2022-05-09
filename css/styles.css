@@ -60,7 +60,7 @@
 /*General*/
 
 .page-body {
-    padding-right: 54px;
+    /* padding-right: 54px; */
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -723,16 +723,26 @@ img {
 .page {
     height: 100%;
     display: grid;
+    position: absolute;
+    
+    
+    
 }
 
 .page-body {
     min-height: 100%;
-    width: 1300px;
-    justify-self: center;
+    width: 100vw;
+    
 
     display: grid grid;
     grid-template-columns: min-content 1fr min-content;
     align-content: start;
+    overflow-x: hidden;
+}
+@media(min-width:px){
+    .page-body{
+
+    }
 }
 .container {
     width: 100%;
@@ -874,12 +884,27 @@ img {
     min-width: 940px;
     
     
+    
+    
+    
 
  
 }
 
 /*Slide-backgrounds*/
+.site-wrapper {
+    min-height: 100%;
+    width: 1300px;
+    padding: 0 80px;
+    margin: 0 auto;
+    
 
+    display: grid grid;
+    grid-template-columns: min-content 1fr min-content;
+    align-content: start;
+    overflow-x: hidden;
+    min-width: 940px;
+}
 .site-wrapper-1 {
     background-color: var(--background-1);
     background-image: url(../img/Slide-1.png);
@@ -899,9 +924,15 @@ img {
     left: 0;
     background-repeat: no-repeat;
     background-position: top center;
+    
     z-index: -1;
     overflow: visible;
     
+}
+@media (max-width: 1470px){
+    .page-body__background{
+        padding-left: 50vw;
+    }
 }
 /*News*/
 .news {
