@@ -12,13 +12,14 @@
     <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icons/icon.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <script src="js/slider.js"></script>
+   
 
 
 
 </head>
 
 <body class="page-body site-wrapper-1">
+    <div class="page-body__background"></div>
 
 
 
@@ -49,17 +50,18 @@
                 <ul class="nav-user-list ul1">
                     <li class="nav-user-item">
                         <h3 class="visually-hidden">Поиск по сайту</h3>
-                        <button href="" class="nav-user-item-link nav-search"></button>
+                        <button class="nav-user-item-link nav-search"></button>
                     </li>
                     <li class="nav-user-item">
-                        <button href="" class="nav-user-item-link nav-login">Вход</button>
+                        <button class="nav-user-item-link nav-login">Вход</button>
                     </li>
                     <li class="nav-user-item">
-                        <button href="" class="nav-user-item-link nav-basket">Пусто</button>
+                        <button class="nav-user-item-link nav-basket">Пусто</button>
                     </li>
                 </ul>
             </div>
             <section class="modal modal-catalog">
+                <h2 class="visually-hidden">Окно Каталога</h2>
 
 
             </section>
@@ -69,11 +71,7 @@
 
 
             </div>
-            <section class="modal modal-basket">
-
-
-            </section>
-
+          
 
 
         </nav>
@@ -114,9 +112,9 @@
                 </li>
             </ul>
             <div class="slider-controls">
-                <button type="button" class="slider-control slider-control-1" aria-label="Первый слайд"></button>
-                <button type="button" class="slider-control slider-control-2" aria-label="Второй слайд"></button>
-                <button type="button" class="slider-control slider-control-3" aria-label="Второй слайд"></button>
+                <button type="button" class="slider-control slider-control-1" aria-label="Первый слайд" data-action="slide-1"></button>
+                <button type="button" class="slider-control slider-control-2" aria-label="Второй слайд" data-action="slide-2"></button>
+                <button type="button" class="slider-control slider-control-3" aria-label="Второй слайд" data-action="slide-3"></button>
             </div>
         </section>
         <section class="news">
@@ -603,6 +601,25 @@
             OverLay.classList.remove("overlay");
         });
         // slider code
+        const sliderControls = document.querySelectorAll(".slider-control").forEach((item, index, nodeList) => {
+            item.addEventListener("click", (e) => {
+            e.preventDefault();
+            const id = e.target.getAttribute("data-action")
+            document.querySelector(".page-body__background").classList.remove("site-wrapper-1", "site-wrapper-2","site-wrapper-3")
+            document.querySelector(".page-body__background").classist.add(`site-wrapper-${parseInt(id)}`);
+                                                                      
+            document.querySelectorAll(".slider-control").forEach((child) => {
+                child.classList.remove("current");
+            })
+            document.querySelectorAll(".slider-item").forEach((child) => {
+                child.classList.remove("slide-current");
+        })
+        e.target.classList.add("current")
+        document.querySelector(`.${id}`).classList.add("slide-current")
+
+
+    })
+})
 
 
 

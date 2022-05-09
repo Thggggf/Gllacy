@@ -857,7 +857,7 @@ img {
 .slide-current {
     display: grid;
 }
-.slider-controls .current {
+.slider-control.current {
     background-color: var(--basic-white);
 }
 .slider-control {
