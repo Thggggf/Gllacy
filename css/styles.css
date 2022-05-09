@@ -894,7 +894,7 @@ img {
 }
 .page-body__background{
     height: 2700px;
-    min-width: 5000px;
+    min-width: 100%;
     position: absolute;
     left: 0;
     background-repeat: no-repeat;
