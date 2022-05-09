@@ -459,6 +459,7 @@ img {
 
 /*Map*/
 .main-map {
+
 }
 /*Footer*/
 .main-footer {
@@ -871,9 +872,9 @@ img {
 }
 .page-body {
     min-width: 940px;
+    
 
-    background-repeat: no-repeat;
-    background-position: top center;
+ 
 }
 
 /*Slide-backgrounds*/
@@ -890,7 +891,17 @@ img {
     background-color: var(--background-3);
     background-image: url(../img/Slide-3.png);
 }
-
+.page-body__background{
+    height: 10000px;
+    min-width: 100%;
+    position: absolute;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: -1;
+    overflow: visible;
+    
+}
 /*News*/
 .news {
     display: grid;
@@ -1105,7 +1116,12 @@ img {
     justify-content: center;
     margin: 0 0 0 54px;
 }
-.map-temp {
+.iframe-map{
+    
+
+}
+.map-wrapper {
+    pointer-events:none;
     position: absolute;
 
     width: 1250px;
@@ -1114,6 +1130,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
 
 .pin {
     justify-self: center;
