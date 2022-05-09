@@ -873,6 +873,7 @@ img {
 .page-body {
     min-width: 940px;
     
+    
 
  
 }
@@ -892,7 +893,7 @@ img {
     background-image: url(../img/Slide-3.png);
 }
 .page-body__background{
-    height: 10000px;
+    height: 2700px;
     min-width: 100%;
     position: absolute;
     left: 0;
