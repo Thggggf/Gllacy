@@ -30,9 +30,6 @@
         "node": "8.16"
     },
     "dependencies": {
-        "del": "^5.1.0",
-        "gulp-rename": "^2.0.0",
-        "micromodal": "^0.4.10",
-        "uglify-es": "^3.3.9"
+        
     }
 }

@@ -119,17 +119,6 @@ window.addEventListener("keydown", function (evt) {
 
 
 
-const FeedbackModalLink = document.querySelector(".modal-feedback-form-button");
-FeedbackModalLink.addEventListener("click", function () {
-    const FeedbackModal = document.querySelector(".modal-feedback");
-    const OverLay = document.querySelector(".fade")
-    OverLay.classList.add("overlay");
-
-    FeedbackModal.classList.add("modal-show");
-
-
-
-});
 
 
 
@@ -149,15 +138,34 @@ window.addEventListener("keydown", function (evt) {
 
 });
 
-
-const FeedbackClose = document.querySelector(".modal-feedback-close");
-FeedbackClose.addEventListener("click", function () {
+const feedbackClose = () => {
     const FeedbackModal = document.querySelector(".modal-feedback");
-
     FeedbackModal.classList.remove("modal-show");
     const OverLay = document.querySelector(".fade")
     OverLay.classList.remove("overlay");
+    OverLay.removeEventListener("click", feedbackClose)
+    document.querySelector(".feedback-form").addEventListener("submit", (e) => e.target.preventDefault())
+}
+const FeedbackCloseButton = document.querySelector(".modal-feedback-close");
+FeedbackCloseButton.addEventListener("click", feedbackClose);
+
+const FeedbackModalLink = document.querySelector(".modal-feedback-form-button");
+FeedbackModalLink.addEventListener("click", function () {
+    const FeedbackModal = document.querySelector(".modal-feedback");
+    const OverLay = document.querySelector(".fade")
+    OverLay.classList.add("overlay");
+
+    FeedbackModal.classList.add("modal-show");
+    OverLay.addEventListener("click", feedbackClose)
+    document.querySelector(".feedback-form").addEventListener("submit", (e) => e.target.preventDefault())
+
+
+
 });
+
+c
+
+
 // slider code
 
 

@@ -1229,7 +1229,7 @@ img {
 
 }
 .map-wrapper {
-    pointer-events:none;
+    
     position: absolute;
 
     width: 1250px;
@@ -1645,7 +1645,8 @@ img {
 }
 
 .overlay {
-    top: 0px;
+    top: 0;
+    left: 0;
 
     display: block;
     background-color: rgba(0, 0, 0, 0.3);
