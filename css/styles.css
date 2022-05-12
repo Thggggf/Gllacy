@@ -1229,7 +1229,7 @@ img {
 
 }
 .map-wrapper {
-    
+    pointer-events: none;
     position: absolute;
 
     width: 1250px;
@@ -1245,6 +1245,7 @@ img {
     align-self: center;
 }
 .feedback-form {
+    pointer-events: all;
     order: 1;
     margin: 62px 54px 62px 27px;
     justify-self: end;
