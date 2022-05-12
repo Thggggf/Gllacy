@@ -993,12 +993,13 @@ img {
 @media (max-width:1050px){
     .site-wrapper{
         margin-left: 0vw;
-        padding: 0 20vw;
-    }
+       }
     .page-body__background{
         padding-left: 80vw;
     }
 }
+
+
 
 .catalog-page-body{
     padding-right: 27px;
@@ -1568,6 +1569,7 @@ img {
     box-sizing: border-box;
     padding: 20px 0 0 24px;
 }
+.modal-feedback.active{display:block}
 .modal-feedback-form input {
     width: 261px;
     height: 40px;
